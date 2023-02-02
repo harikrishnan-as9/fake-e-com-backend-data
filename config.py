@@ -8,5 +8,5 @@ config = {
     "rating_min": 1,
     "rating_max": 5,
     "rated_by_min": 1,   
-    "rated_by_max": 10,   
+    "rated_by_max": 100,   
 }
