@@ -29,6 +29,13 @@ def random():
     print('populated')
     return render_template('regnerated.html')
 
+@app.after_request
+def after_request(response):
+    response.headers['Access-Control-Allow-Methods'] = '*'
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Headers'] = '*'
+    return response
+
 from populate import populate
 @app.before_first_request
 def before_first_request():
